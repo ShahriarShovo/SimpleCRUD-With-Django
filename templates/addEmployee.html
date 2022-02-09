@@ -1,0 +1,23 @@
+
+
+<!-- Edit Modal HTML -->
+<div id="addEmployeeModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form method="POST">
+				<div class="modal-header">						
+					<h4 class="modal-title">{{addandupdate}}</h4>
+					<a href="{% url 'crud:index' %}">Back to Index </a>
+				</div>
+				<div class="modal-body">
+					{% csrf_token %}					
+					{{form.as_p}}				
+				</div>
+				<div class="modal-footer">
+				
+					<input type="submit" class="btn btn-success" value="Submit">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
